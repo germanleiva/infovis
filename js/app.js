@@ -58,12 +58,13 @@ d3.json("./data/data.json",function(data){
 
     var time_axis = d3.svg.axis()
         .scale(time_scale)
-        .ticks(d3.time.years, 1);
+        .ticks(d3.time.months, 3);
 
     d3.select("svg")
         .append('g')
         .attr('class', 'x axis')
         .attr('transform', "translate(0," + height + ")")
+         .call(time_axis);
 
     var count_axis = d3.svg.axis()
         .scale(project_scale)
