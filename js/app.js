@@ -92,10 +92,14 @@ d3.json("./data/data.json",function(data){
             // }
         })
         .attr('fill', function(d) {
+            var date = format.parse(d['date'])
+            if (date.getHours() > 8 && date.getHours() < 18) {
+                return 'yellow'
+            }
             // if (d['home'] === d['team1'] || d['home'] === d['team2']) {
                 // return 'red'
             // } else {
-                return 'blue';
+                return 'red';
             // }
         });
 
