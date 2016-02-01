@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>GitHub Project Reader</title>
+</head>
+<body>
+    <div id="placeholder">
+    </div>
+    <p>
+        Name of a GitHub Project: 
+        <input type="text" name="projectName" id="projectName" text="kevinvanhove/cssobjects"/>
+            <!--<input type="submit" name="Submit"/>-->
+        <button id="submit">Submit</button>
+        <button id="sortCommit">Sort commits</button>
+        <button id="checkUser">Check Users</button>
+        
+    </p>
+    <p>
+        <div id="result">Result: </div>
+    </p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="./binaryHeap.js"></script>    
+    <script>
+    var idAPI = '5de845629fbac8437261';
+    var secretAPI = '38d3ffe1ab6c3e374c16273a6e88783698cdd7e4';
+    var timezoneAPI = 'AIzaSyAL1a43uQf4gmxJ50DwAnC_dtRLUEBwPv8';
+    
+    //var projectG;
+    
+    var service;
+    var waitForEvent;
+
+    var projectHM = {};
+
+    var locHM = {};
+    var timeZoneHM = {};
+
+    var commitInP = 0;
+
+    /*var heap = new binaryHeap(function(a, b){
+        return a.ts < b.ts;
+    });*/
+
+
+    //var commitHM = {};
+
+    Object.size = function(obj) {
+        var size = 0, key;
+        for (key in obj) {
+            if (obj.hasOwnProperty(key)) size++;
+        }
+        return size;
+    };
+
+    function Commit(sha){
+        this.sha = sha;
+        this.nbModif = 0;
+        this.date = "";
+        this.ts = 0;
+        this.user = "";
+        
+    }
+
+    function Branch(name){
+        this.name = name;
+        this.commitList = {};
+    }
+
+    function Project(name){
+        this.name = name;
+        this.branchList = [];
+        this.commitHM = {};
+        this.userList = {};
+        this.heap = new binaryHeap(function(a, b){
+            return a.ts < b.ts;
+        });
+    }
+
+    function User(name){
+        this.name = name;
+        this.city = "";
+        this.timezone = 0;
+    }
+
+    function Loc(query){
+        this.query = query;
+        this.name = "";
+        this.coord = "";
+    }
+
+    function initialize() {
+      //var pyrmont = new google.maps.LatLng(-33.8665433,151.1956316);
+
+      /*map = new google.maps.Map(document.getElementById('map'), {
+          center: pyrmont,
+          zoom: 15
+        });
+        */
+      /*var request = {
+        query: 'Paris,France'
+      };*/
+
+        service = new google.maps.places.PlacesService(document.createElement('div'));
+
+        
+      //service.textSearch(request, callback);
+    }
+
+    function recoverData(nameProject){
+        var nom = nameProject;
+        var project = new Project(nom);
+        //projectG = project;
+
+
+        projectHM[nameProject] = project;
+
+        //$('#result').append(' '+nom);
+        console.log('https://api.github.com/repos/'+nom+'/branches?callback=callback&client_id='+idAPI+'&client_secret='+secretAPI+'');
+        //commitInP ++;
+        $.ajax({
+            //url: 'https://api.github.com/repos/'+nom+'?callback=callback',
+            url: 'https://api.github.com/repos/'+nom+'/branches?callback=callback&client_id='+idAPI+'&client_secret='+secretAPI+'',
+            dataType: 'jsonp',
+            success: function(data){
+                $('#result').append('<br/>Loading...');
+                var numberOfBranch = data.data.length;
+                for(var i=0; i < data.data.length; i++){
+                    console.log("Branch Name : "+data.data[i].name);
+                    var b = new Branch(data.data[i].name);
+                    var lastCommit = data.data[i].commit.sha;
+                    recoverCommit(lastCommit, b, project);
+                    project.branchList.push(b);
+                
+                }
+                
+                $('#result').append('<br/>Loading ok');
+            },
+            error: function(e){
+                $('#result').append('<br/>Loading Failed, this project doesn\'t exist...');
+            }
+        });
+    }
+
+    function callbackGAPI(results, status) {
+      if (status == google.maps.places.PlacesServiceStatus.OK) {
+
+
+        //We take the first result
+        var place = results[0];
+        console.log(place.formatted_address+" : "+place.geometry.location);
+      }
+    }
+
+    function getTimeZoneOffSet(coord, query){
+        var coordTab = String(coord).split(',');
+        var latitude = coordTab[0].substr(1);
+        var longitude = coordTab[1].substr(0, coordTab[1].lastIndexOf(")")-1);
+        var url = "https://maps.googleapis.com/maps/api/timezone/xml?location="+latitude.trim()+","+longitude.trim()+"&timestamp=1331766000&key="+timezoneAPI+"";
+        
+        console.log(url);
+
+        $.ajax({
+            type: "get",
+            url: url,
+            dataType: "xml",
+            success: function(data) {
+                /* handle data here */
+                //$("#show_table").html(data);
+                //console.log(data.getDocument());
+                $(data).find('TimeZoneResponse').each(function(){
+                    var offset = $(this).find('raw_offset').text();
+                    offset = offset;
+                    timeZoneHM[query]=offset;
+                    console.log(offset);
+                });
+            },
+            error: function(xhr, status) {
+                /* handle error here */
+                //$("#show_table").html(status);
+                console.log(status);
+            }
+        });
+    }
+
+
+    function recoverCommit(name, branch, project){
+        //console.log("Last Commit : "+name);
+        $.ajax({
+            //url: 'https://api.github.com/repos/'+nom+'?callback=callback',
+            url: 'https://api.github.com/repos/'+project.name+'/commits/'+name+'?callback=callback&client_id='+idAPI+'&client_secret='+secretAPI+'',
+            dataType: 'jsonp',
+            success: function(data){
+                var c = new Commit(name);
+                c.nbModif = data.data.stats.total;
+                c.date = data.data.commit.author.date;
+
+                /*DateTimeFormatter dtf = DateTimeFormat.forPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+                DateTime dt = dtf.parseDateTime(c.date);
+                Date date = dt.toDate();*/
+                var date = new Date(c.date);
+                c.ts = date.getTime()/1000;
+                //console.log("Date : "+date.getFullYear())
+
+                console.log("------------------------------------------");
+                console.log("Commit "+c.sha+" : "+c.nbModif+" ; "+c.date+" ; "+c.ts);
+                branch.commitList[c.sha] = c;
+                project.commitHM[c.sha] = c;
+                if(data.data.committer != null){
+                        var committer = data.data.committer.login;
+                        if((committer in project.userList) == false){
+                            project.userList[committer] = new User(committer);
+                            project.userList[committer].name = committer;
+                            getUserTZ(committer, project);
+                        }
+                        c.user = committer;
+                    //}
+                }
+                var par = data.data.parents;
+                if(par.length > 0){
+                    console.log("Number of Parent : "+par.length);
+                    for(var k = 0; k<par.length; k++){
+                        if((par[k].sha in project.commitHM) == false){
+                            recoverCommit(par[k].sha, branch, project);
+                        }
+                    }
+                }
+                else{
+                    console.log("Branch "+branch.name+" : "+Object.size(branch.commitList)+" commits");
+                    console.log("Number of users using this branch : "+Object.size(project.userList));
+                }
+
+                
+                
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        //Test
+        $('#projectName').val("kevinvanhove/cssobjects");
+        
+    });
+
+    $('#checkUser').click(function(){
+        var nom = $('#projectName').val();
+        project = projectHM[nom];
+        for(var i in project.userList){
+            var city = "";
+            var coord = "";
+            var query = project.userList[i].city;
+            var tzo = 0;
+            if(query){
+                city = locHM[query].name;
+                coord = locHM[query].coord;
+                tzo = timeZoneHM[query];
+            }
+            console.log(i+" lives in "+city+" : "+coord+" TZO : "+tzo+"h");
+        }
+    });
+
+    function getUserTZ(user, project){
+        $.ajax({
+            //url: 'https://api.github.com/repos/'+nom+'?callback=callback',
+            url: 'https://api.github.com/users/'+user+'?callback=callback&client_id='+idAPI+'&client_secret='+secretAPI+'',
+            dataType: 'jsonp',
+            success: function(data){
+                var loc = "";
+                if(data.data.location != null){
+                    loc = data.data.location.replace("\ ", "+");
+
+                    project.userList[data.data.login].city = loc;
+                
+                    //loc = loc.replace("\ ", "+");
+                    //console.log(data.data.login+" : "+loc);
+                    var request = {
+                        query: loc
+                    };
+                    //service.textSearch(request, callbackGAPI);
+                    if((loc in locHM) == false){
+                        service.textSearch(request, function(results, status){
+                            if (status == google.maps.places.PlacesServiceStatus.OK) {
+
+                                var place = results[0];
+                                console.log(request.query+" : "+place.formatted_address+" : "+place.geometry.location);
+                                var l = new Loc(request.query);
+                                l.name = place.formatted_address;
+                                l.coord = place.geometry.location;
+                                locHM[request.query] = l;
+                                getTimeZoneOffSet(l.coord, request.query);
+                                
+                            }
+                        });
+                    }
+                }
+
+            }
+            });
+    }
+
+    /*$('#getUser').click(function(){
+        for(var i in projectG.userList){
+            console.log(i);
+            
+
+        }
+    });*/
+
+    function sortCommit(nom){
+        project = projectHM[nom];
+        for(var commit in project.commitHM){
+            console.log("User : "+project.commitHM[commit].user);
+            if(commit.user != ""){
+                console.log("Timestamp 1 : "+project.commitHM[commit].ts);
+                project.commitHM[commit].ts = parseInt(project.commitHM[commit].ts) + parseInt(timeZoneHM[project.userList[project.commitHM[commit].user].city]);
+                //console.log("User : "+project.userList[project.commitHM[commit].user].city);
+                //console.log("TimeZone : "+timeZoneHM[project.userList[project.commitHM[commit].user].city]);
+                console.log("Timestamp 2 : "+project.commitHM[commit].ts);
+            }
+            project.heap.push(commit);
+        }
+        while (project.heap.size() != 0){
+            var c = project.heap.pop();
+            console.log(project.heap.size()+" : TZ : "+c);
+        }
+    }
+
+    $('#sortCommit').click(function(){
+        var nom = $('#projectName').val();
+        sortCommit(nom);
+    });
+
+    $('#submit').click(function(){
+        var nom = $('#projectName').val();
+        recoverData(nom);
+
+    });
+
+    function commitDone(){
+        commitInP -= 1;
+        console.log("Commit in progress "+commitInP);
+        if(commitInP == 0){
+            console.log("Commit Done !");
+        }
+    }
+
+    /*$.ajax({
+      url: 'https://api.github.com/repos/kevinvanhove/cssobjects',
+      dataType: 'jsonp',
+      success: function(data){
+        console.log( data );
+        $('#result').append('<br/>id: '+data["id"]);
+      }
+    });*/
+    </script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpezBOUQ2g_l6xHttefSRqtF4RIkIYU3w&libraries=places&callback=initialize"></script>
+</body>
+</html>

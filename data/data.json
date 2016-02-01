@@ -1,0 +1,1370 @@
+[
+    {
+        "sha": "a3f51f7f3a00bc17f10e59546977a9c0b40697a5",
+        "nbModif": 13,
+        "date": "2011-02-23T06:18:33Z",
+        "ts": 1298441913,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "4c9a2954d1d9769d7a70d1e5646509ee4ef39bd2",
+        "nbModif": 3,
+        "date": "2011-02-14T05:21:18Z",
+        "ts": 1297660878,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "5731d85a8192434077c525970d031fe861f5dafb",
+        "nbModif": 52,
+        "date": "2011-02-14T04:42:43Z",
+        "ts": 1297658563,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "e229e3406596c1ef03394b227f8a67b09468d5a4",
+        "nbModif": 126,
+        "date": "2011-02-14T02:52:40Z",
+        "ts": 1297651960,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "c5c5c0a06105438c7c0d8fcd90e9272004eb7b18",
+        "nbModif": 4,
+        "date": "2011-02-13T04:58:11Z",
+        "ts": 1297573091,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "d0fea658c36f3dddcb41b2c402eaa146ff069bb8",
+        "nbModif": 22,
+        "date": "2011-02-13T00:03:28Z",
+        "ts": 1297555408,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "42cf1c6c48ab91e1a7c593457c6887d2ac926e25",
+        "nbModif": 10,
+        "date": "2011-02-12T23:45:45Z",
+        "ts": 1297554345,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "9430a91b76700d0f2823b9bb97ff4dab5302f65c",
+        "nbModif": 145,
+        "date": "2011-02-12T21:57:49Z",
+        "ts": 1297547869,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "e6757d740bcb73d2494856fd63675124edfb1cba",
+        "nbModif": 459,
+        "date": "2011-02-12T07:56:23Z",
+        "ts": 1297497383,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "f5ba0ca73ee8ce688bbe7ca01fb5ffe482958257",
+        "nbModif": 2,
+        "date": "2011-02-11T03:04:34Z",
+        "ts": 1297393474,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "7948cc6f3d1faf9a6fe097fe3c06f55e209550ca",
+        "nbModif": 21,
+        "date": "2011-02-11T01:52:47Z",
+        "ts": 1297389167,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "4e784ee63aec60b79ed41747d7c426493a34a515",
+        "nbModif": 10,
+        "date": "2011-02-11T01:24:07Z",
+        "ts": 1297387447,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "d74385bac52e90ff15e9e07c620e5833b43253eb",
+        "nbModif": 1,
+        "date": "2011-02-06T21:51:53Z",
+        "ts": 1297029113,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "a34b202cff4f3ca3e3a1c6db86f3f59a0fa69eaf",
+        "nbModif": 53,
+        "date": "2011-02-06T21:39:41Z",
+        "ts": 1297028381,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "c452296f235f982d96b32a85f7c4cf15d3593f90",
+        "nbModif": 0,
+        "date": "2011-02-06T20:10:58Z",
+        "ts": 1297023058,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "6821085ec4f1d2289998e90ae5c8036cdc35d1a8",
+        "nbModif": 2196,
+        "date": "2011-02-06T19:54:05Z",
+        "ts": 1297022045,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "ffa347148ba57cc0beba115564e1d3ee0d9bae3f",
+        "nbModif": 31,
+        "date": "2011-02-06T19:49:34Z",
+        "ts": 1297021774,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "1df73e0e9096b04d73b1d313fabe3a9790ebe722",
+        "nbModif": 61,
+        "date": "2011-02-06T19:27:26Z",
+        "ts": 1297020446,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "74b26ede8a9621c3845d21fead29c029097690cf",
+        "nbModif": 69,
+        "date": "2011-02-06T19:24:40Z",
+        "ts": 1297020280,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "6d4495f3cea91bfb00aa04dfd461679903d176d9",
+        "nbModif": 66,
+        "date": "2011-02-06T07:20:47Z",
+        "ts": 1296976847,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "eca44150a629f591b61579f63107e88ea69e1de4",
+        "nbModif": 190,
+        "date": "2011-02-06T06:14:46Z",
+        "ts": 1296972886,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "6b56f46223ffd813718ca7baaaae4797cb13b43d",
+        "nbModif": 2,
+        "date": "2011-02-06T05:01:38Z",
+        "ts": 1296968498,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "b623c362feb3012adaa29b4faae17d6d695b48aa",
+        "nbModif": 196,
+        "date": "2011-02-06T05:00:21Z",
+        "ts": 1296968421,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "d469683b72e80c48d96fb0996020eb23df9ac476",
+        "nbModif": 18,
+        "date": "2011-02-06T02:28:08Z",
+        "ts": 1296959288,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "93865e4102aad3c9267ef92b6c90b1d45c82d9c4",
+        "nbModif": 32,
+        "date": "2011-02-06T02:10:20Z",
+        "ts": 1296958220,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "fb98389201889d5d9f6b67a28981808d1d2d90d7",
+        "nbModif": 12,
+        "date": "2011-02-06T01:41:30Z",
+        "ts": 1296956490,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "25f1caeb423915cfc46843f00a05f16599d2915b",
+        "nbModif": 20,
+        "date": "2011-02-06T01:36:03Z",
+        "ts": 1296956163,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "85335ae480467feccf261e987a36a8b856bccdb5",
+        "nbModif": 12,
+        "date": "2011-02-06T01:22:35Z",
+        "ts": 1296955355,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "504e8f7a9bbb592edcb7566294877672e264e2c0",
+        "nbModif": 148,
+        "date": "2011-02-02T06:20:32Z",
+        "ts": 1296627632,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "f52502514d9e9713fc8de9d46b0278f1f4fe89e3",
+        "nbModif": 20,
+        "date": "2011-01-31T06:20:38Z",
+        "ts": 1296454838,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "a397947dbb7af897b884390d8a8aaa2e317bcc1f",
+        "nbModif": 1,
+        "date": "2011-01-31T06:03:08Z",
+        "ts": 1296453788,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "4d7ae56618838fbc44b883da8a9ad85dfbbdd37e",
+        "nbModif": 27,
+        "date": "2011-01-31T06:02:03Z",
+        "ts": 1296453723,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "29d2bebe87f3321d5311b2ac145c3ee11b3ba29e",
+        "nbModif": 3,
+        "date": "2011-01-31T03:21:14Z",
+        "ts": 1296444074,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "0d32fd8d73a8396bd23edcba13416bdb430a34d0",
+        "nbModif": 11,
+        "date": "2011-01-31T03:04:11Z",
+        "ts": 1296443051,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "f59aabad8890665656ef45fc80c3ff9e2aa286e4",
+        "nbModif": 34,
+        "date": "2011-01-31T03:01:42Z",
+        "ts": 1296442902,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "09b73cd55dd7d0cb21cb3117bc4ff1666f670281",
+        "nbModif": 72,
+        "date": "2011-01-31T02:24:40Z",
+        "ts": 1296440680,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "df66893720289fdd7f9c1bbe98f26bd5d720fdec",
+        "nbModif": 11,
+        "date": "2011-01-31T01:00:46Z",
+        "ts": 1296435646,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "7150b1a27371bb92c0cc31052b01293e37ce63fb",
+        "nbModif": 87,
+        "date": "2011-01-30T19:23:25Z",
+        "ts": 1296415405,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "20d6296e5a9248c5c82d8f745c86c2e85692e7e1",
+        "nbModif": 6,
+        "date": "2011-01-30T18:11:06Z",
+        "ts": 1296411066,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "97f08866ee552dc715402b727039d7028b014c2b",
+        "nbModif": 75,
+        "date": "2011-01-30T07:56:03Z",
+        "ts": 1296374163,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "878654d74630a53b6a69f20bfea2cd9ab4dfa6c5",
+        "nbModif": 11,
+        "date": "2011-01-30T01:52:00Z",
+        "ts": 1296352320,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "27fed966bb8dea65d1b81fa54eb3c53aa444b26c",
+        "nbModif": 8,
+        "date": "2011-01-30T01:48:48Z",
+        "ts": 1296352128,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "c41bb3fb674873bf2501fb329bec519427f30ed1",
+        "nbModif": 70,
+        "date": "2011-01-30T01:46:07Z",
+        "ts": 1296351967,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "ced8867f30ee0c30ddf4b82cfa081ab22cc3282f",
+        "nbModif": 13,
+        "date": "2011-01-29T04:01:52Z",
+        "ts": 1296273712,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "05c29e9ea88ad9ab804c99ff7f55b31871d4d759",
+        "nbModif": 132,
+        "date": "2011-01-29T03:50:24Z",
+        "ts": 1296273024,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "7353399930dada7bbc829dcd2a98c494934dca62",
+        "nbModif": 3321,
+        "date": "2011-01-29T03:43:37Z",
+        "ts": 1296272617,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "64c3d6a410db65582e1cabc9a099bdddd78e6933",
+        "nbModif": 0,
+        "date": "2011-01-29T03:41:37Z",
+        "ts": 1296272497,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "e96beee9cd32e209763b039673f18c2dfa83a0b3",
+        "nbModif": 1,
+        "date": "2016-01-30T11:10:29Z",
+        "ts": 1454152229,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "3d1072e3414173a446055c5effac908147bebbfe",
+        "nbModif": 1,
+        "date": "2016-01-25T23:44:13Z",
+        "ts": 1453765453,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "1347e0faed16e44331f58978c6bb7bcfb970ef73",
+        "nbModif": 1,
+        "date": "2016-01-24T23:09:28Z",
+        "ts": 1453676968,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "a70ff966d0425719ed1bdd4bfb2aba1584e5123c",
+        "nbModif": 1,
+        "date": "2016-01-29T22:24:11Z",
+        "ts": 1454106251,
+        "user": "dmitriz",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "d486a2056fe5feb012e39f31003af03e18e59e06",
+        "nbModif": 1,
+        "date": "2016-01-25T20:26:04Z",
+        "ts": 1453753564,
+        "user": "dmitriz",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "54b75414664661c8b632b1db675db578350414cf",
+        "nbModif": 1,
+        "date": "2015-12-30T11:52:47Z",
+        "ts": 1451476367,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "93434e8299603fc58d1cfb0295745fbfd36064a1",
+        "nbModif": 1,
+        "date": "2016-01-24T22:30:41Z",
+        "ts": 1453678241,
+        "user": "Sepho",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "b528afc96d508599956a3903e4784e9763243bb8",
+        "nbModif": 1,
+        "date": "2015-12-29T08:41:06Z",
+        "ts": 1451378466,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "daeaf0b5844239ff44b644bd167fbc0f21eb6f91",
+        "nbModif": 1,
+        "date": "2015-12-05T00:03:19Z",
+        "ts": 1449273799,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "b1582c09a959d1dc6ffb9e6bf53b5d63cf287c1c",
+        "nbModif": 2,
+        "date": "2015-12-28T16:27:09Z",
+        "ts": 1451298429,
+        "user": "ziyasal",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "4bb252d1ecc09fe5ec61dd9ed33010982f930db4",
+        "nbModif": 1,
+        "date": "2015-12-30T08:01:51Z",
+        "ts": 1451437311,
+        "user": "jsdevel",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "cffc23eb69eb85ec555963b60b28227e29c5db14",
+        "nbModif": 2,
+        "date": "2015-11-30T08:39:19Z",
+        "ts": 1448872759,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "7cb52bc3e60c4424b8b60af068af5622acea0b70",
+        "nbModif": 1,
+        "date": "2015-12-04T23:56:40Z",
+        "ts": 1449280600,
+        "user": "gkaimakas",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "f401d0d0ba33ee4d6cbc5040b6dd528ec36f2534",
+        "nbModif": 1,
+        "date": "2015-12-28T16:22:52Z",
+        "ts": 1451298172,
+        "user": "ziyasal",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "4f474a75db2f54da50094b81e062d9b666144d9f",
+        "nbModif": 242,
+        "date": "2015-11-28T17:40:24Z",
+        "ts": 1448732424,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "4f39925ced561be307f29ee7266dadfccc2930ae",
+        "nbModif": 2,
+        "date": "2015-11-30T01:20:41Z",
+        "ts": 1448828441,
+        "user": "Liamraystanley",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "e3db023d8b61d83dd711e4db710839cbfd0b7a70",
+        "nbModif": 1,
+        "date": "2015-11-27T14:52:16Z",
+        "ts": 1448635936,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "a7a4abf2516904356ac28ceb129eb5fe58cebee6",
+        "nbModif": 242,
+        "date": "2015-08-19T04:52:09Z",
+        "ts": 1439941929,
+        "user": "JimmyBoh",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "b7165a3c91e8d6f7c7250b4e580d6946f0d994a4",
+        "nbModif": 20,
+        "date": "2015-11-14T11:02:52Z",
+        "ts": 1447498972,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "e0904975b9b1efa57a1a2570f0570a2379421932",
+        "nbModif": 1,
+        "date": "2015-11-27T14:28:29Z",
+        "ts": null,
+        "user": "shoudaos",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "4b30db842cb55291fe344cd88905f42bd2035342",
+        "nbModif": 1,
+        "date": "2015-10-21T08:30:19Z",
+        "ts": 1445416219,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "24a17e06c43b895eee917b4ce05fe25aedca34cf",
+        "nbModif": 20,
+        "date": "2015-11-13T22:05:50Z",
+        "ts": null,
+        "user": "ReadmeCritic",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "996b588b84d4202c1ffe3c3a37c55c7ea526063b",
+        "nbModif": 2,
+        "date": "2015-10-16T12:34:08Z",
+        "ts": 1444998848,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "52b0ebe8eddda064258d8a80aa96c0e7ee5f50c0",
+        "nbModif": 1,
+        "date": "2015-10-21T08:14:19Z",
+        "ts": 1445435059,
+        "user": "tushariscoolster",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "2067006a009d07a03b2585d2ed273a886933e629",
+        "nbModif": 1,
+        "date": "2015-08-30T09:19:18Z",
+        "ts": 1440926358,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "b4f3556746157cf3d15b1cc795815787bf6f8675",
+        "nbModif": 2,
+        "date": "2015-10-16T12:20:41Z",
+        "ts": 1444980041,
+        "user": "JimmyBoh",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "6a8a57ec1118066bdce24b395b9ecc77ecd225ab",
+        "nbModif": 1,
+        "date": "2015-08-19T20:25:36Z",
+        "ts": 1440015936,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "f73047820868a6e9374ccbaea6a157b4bef8ea3c",
+        "nbModif": 1,
+        "date": "2015-08-30T06:15:57Z",
+        "ts": null,
+        "user": "sattvabitinc",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "87301eb1e09eae31d5cd03bbafaa0b8607629091",
+        "nbModif": 1,
+        "date": "2015-08-19T20:25:22Z",
+        "ts": 1440015922,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "53515539ecb61a39162e799ef9f60da456ca7160",
+        "nbModif": 1,
+        "date": "2015-08-19T04:52:09Z",
+        "ts": 1439931129,
+        "user": "StevenLambion",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "28ac25ebdf30444da2b23933cfe598ade982e94a",
+        "nbModif": 2,
+        "date": "2015-08-05T07:21:56Z",
+        "ts": 1438759316,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "885fc03dd02beb9bab73486230b77f43486b9b39",
+        "nbModif": 1,
+        "date": "2015-08-18T17:48:10Z",
+        "ts": 1439923690,
+        "user": "kasperlewau",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "7a86b071e6ea1328ae7e81013bd0d12e13b91171",
+        "nbModif": 8,
+        "date": "2015-08-03T07:45:41Z",
+        "ts": 1438587941,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "fd992f6180e026c17003a3a1d03ba80e5ad030ce",
+        "nbModif": 15,
+        "date": "2015-08-03T07:45:15Z",
+        "ts": 1438587915,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "a1c46997639961d5b2d3c3a236432f8d361b126f",
+        "nbModif": 8,
+        "date": "2015-08-02T16:54:36Z",
+        "ts": 1438523676,
+        "user": "fredericksilva",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "fdbf013ce443c9f587e1a9af5e38dfc4a01dbb56",
+        "nbModif": 15,
+        "date": "2015-08-02T16:46:03Z",
+        "ts": 1438523163,
+        "user": "fredericksilva",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "80f5165e7b64c168e5a8bf326238b7338d213765",
+        "nbModif": 1,
+        "date": "2015-08-03T07:44:47Z",
+        "ts": 1438587887,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "388464aacff8c10f8f45079e53bacb6501a6aad0",
+        "nbModif": 1,
+        "date": "2015-05-25T06:52:48Z",
+        "ts": 1432536768,
+        "user": "",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "35063ef4f000b714af5e215e520cc0d43a1e9f97",
+        "nbModif": 1,
+        "date": "2015-07-24T15:58:08Z",
+        "ts": 1437753488,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "46b40997cdaff1ea62776091c1f4db03cf36487c",
+        "nbModif": 1,
+        "date": "2015-07-29T14:06:35Z",
+        "ts": null,
+        "user": "hrajchert",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "adc11c5c327ee4828b1f36a1ad8dd012801e9b2a",
+        "nbModif": 1,
+        "date": "2015-05-19T13:21:03Z",
+        "ts": 1432041663,
+        "user": "",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "a787dd297d4125100e282f1760973e4e1b4b30f9",
+        "nbModif": 1,
+        "date": "2015-05-18T04:36:38Z",
+        "ts": 1431894998,
+        "user": "okigan",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "e31357061fcb853e4d9ebc4b57253672b66e7eae",
+        "nbModif": 1,
+        "date": "2015-07-14T15:33:55Z",
+        "ts": 1436888035,
+        "user": "",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "803d8db79aaf629c644ec17e3d05b7ab00e3e961",
+        "nbModif": 1,
+        "date": "2015-07-24T14:38:26Z",
+        "ts": 1437727106,
+        "user": "alferov",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "d291f0f1bf537accdd9bcd0ea53c624d005e0cbd",
+        "nbModif": 1,
+        "date": "2015-05-18T17:29:12Z",
+        "ts": 1431970152,
+        "user": "",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "e0205b55130fb491370b0d9dd46ed73465e7d3a8",
+        "nbModif": 1,
+        "date": "2015-05-19T13:07:46Z",
+        "ts": 1432022866,
+        "user": "kmaida",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "2412c2ec8f5e88937b01b9ad2bbb2856ad1ace59",
+        "nbModif": 2,
+        "date": "2015-05-08T06:54:25Z",
+        "ts": 1431068065,
+        "user": "",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "ce49cc5aa8e8fcd0fe06baf20f79443708e84e66",
+        "nbModif": 2,
+        "date": "2015-07-07T15:34:05Z",
+        "ts": 1436283245,
+        "user": "",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "fe400411dbc3a0141f5857f8ad6fb9157389fbfe",
+        "nbModif": 1,
+        "date": "2015-07-14T14:10:04Z",
+        "ts": 1436893804,
+        "user": "yoihito",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "21afb20ab91d493e2531256693bf0520852fa0f6",
+        "nbModif": 1,
+        "date": "2015-05-18T17:22:10Z",
+        "ts": 1431948130,
+        "user": "geoperez",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "1d1b08d0a2072364c1e291a7b00af98c4144d98a",
+        "nbModif": 2,
+        "date": "2015-04-23T12:25:23Z",
+        "ts": 1429791923,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "c9e9e95191df26008b22921e6989b62da679fc74",
+        "nbModif": 1,
+        "date": "2015-05-07T22:18:35Z",
+        "ts": 1431026315,
+        "user": "giorgiofellipe",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "d475fed335cb98226a8b2a14b82b53c670517600",
+        "nbModif": 6,
+        "date": "2015-06-26T22:21:47Z",
+        "ts": 1435357307,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "abeaf2ae08f4f580aec1c22226faba5c09b4f2d4",
+        "nbModif": 2,
+        "date": "2015-07-07T15:07:42Z",
+        "ts": 1436281662,
+        "user": "",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "93ab8634e52997a01a1eead12cefee74a9fc47d4",
+        "nbModif": 1,
+        "date": "2015-04-02T22:22:48Z",
+        "ts": 1428013368,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "1ef512bdf071fe8ae7784fbb5a84febd8a29e24d",
+        "nbModif": 1,
+        "date": "2015-04-23T12:19:06Z",
+        "ts": 1429795146,
+        "user": "unicodeveloper",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "f7a0069558eb87e0c68d8a12bca5780a593cd34f",
+        "nbModif": 1,
+        "date": "2015-05-07T22:10:28Z",
+        "ts": 1431025828,
+        "user": "giorgiofellipe",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "6a25cbf1b1d2c72dceb2ff26f21e95591011a182",
+        "nbModif": 1,
+        "date": "2015-06-26T22:19:29Z",
+        "ts": 1435357169,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "7c8ec6f42867a0593ec51e9751f967906aaae6c9",
+        "nbModif": 2,
+        "date": "2015-04-02T05:27:41Z",
+        "ts": 1427952461,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "53b1466a99eb6456d0c9b30f01e03617afa48100",
+        "nbModif": 1,
+        "date": "2015-04-02T21:01:03Z",
+        "ts": 1428015663,
+        "user": "suvjunmd",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "b670fb3b7a395d519e1e515a5fe464b2991fdcbb",
+        "nbModif": 2,
+        "date": "2015-04-23T12:17:20Z",
+        "ts": 1429795040,
+        "user": "unicodeveloper",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "e1556c6a63251f49f8da5f3de1d5aef3794fbeb4",
+        "nbModif": 1,
+        "date": "2015-06-25T23:01:56Z",
+        "ts": 1435273316,
+        "user": "",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "f764a2f7567e373fe3903f2fcc8f89d621cd49ef",
+        "nbModif": 3,
+        "date": "2015-03-25T21:05:30Z",
+        "ts": 1427317530,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "6346972ebe9df69d498582b74265d02aede218cc",
+        "nbModif": 2,
+        "date": "2015-04-02T04:03:39Z",
+        "ts": 1427976219,
+        "user": "hemslo",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "442d7ceafdf36c0e856a5914fe47b80638d8e48f",
+        "nbModif": 3,
+        "date": "2015-04-23T12:08:13Z",
+        "ts": 1429794493,
+        "user": "unicodeveloper",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "6bd2b18d88c7c856ded727b21a93ec4ad5a66412",
+        "nbModif": 1,
+        "date": "2015-06-18T14:14:09Z",
+        "ts": 1434636849,
+        "user": "",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "b3ff56283ab6de98f8c5fa38e4b797c4ecd5e208",
+        "nbModif": 1,
+        "date": "2015-06-25T20:37:29Z",
+        "ts": 1435253849,
+        "user": "munir7",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "3ac3208809f3b3f8d60bf6ca767060e1ea77701e",
+        "nbModif": 1,
+        "date": "2015-03-12T19:30:43Z",
+        "ts": 1426188643,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "4f9c6bf1d20a42d6a55c21a1bbb11d11208fd50c",
+        "nbModif": 3,
+        "date": "2015-03-25T20:48:15Z",
+        "ts": 1427323695,
+        "user": "suvjunmd",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "b80ede266ce1b0afdbb11ce6ad54463897c0ba31",
+        "nbModif": 2,
+        "date": "2015-06-09T22:32:41Z",
+        "ts": 1433889161,
+        "user": "",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "8147c00c9d6ccf7bc334a6c9d12f9ef22febaaf1",
+        "nbModif": 1,
+        "date": "2015-06-18T13:16:13Z",
+        "ts": 1434636973,
+        "user": "ctesniere",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "7fcb204f2cd130e64e6acab6f56bcc0d21099606",
+        "nbModif": 1,
+        "date": "2015-02-10T15:10:01Z",
+        "ts": 1423581001,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "7aaaf730f8bf9884a90aa21b6af6e035ecd9843b",
+        "nbModif": 1,
+        "date": "2015-03-12T16:50:37Z",
+        "ts": 1426153837,
+        "user": "kentcdodds",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "8dd87dac0b9229383b6322c0f40a1871c0f50707",
+        "nbModif": 1,
+        "date": "2015-06-09T22:32:16Z",
+        "ts": 1433889136,
+        "user": "",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "f8044b62c70c43899fd44add9ffa3ea93cf42ad0",
+        "nbModif": 2,
+        "date": "2015-06-09T19:17:13Z",
+        "ts": 1433884633,
+        "user": "suvjunmd",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "371f2fb16ad9a21ef94a5b041987ae03cebbda9e",
+        "nbModif": 1,
+        "date": "2015-01-16T23:44:12Z",
+        "ts": 1421451852,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "69bad1c9a8c09b963f77b6f9e58216a5752c6484",
+        "nbModif": 1,
+        "date": "2015-02-10T14:55:51Z",
+        "ts": 1423569351,
+        "user": "stewones",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "51a89a7f38d81e9d7f8f1cd2ca9f4cbd698c139a",
+        "nbModif": 1,
+        "date": "2015-06-08T07:27:43Z",
+        "ts": 1433748463,
+        "user": "",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "b77fe348523ac08065163a98343e2d9c28c8b964",
+        "nbModif": 1,
+        "date": "2015-06-09T19:12:02Z",
+        "ts": 1433884322,
+        "user": "suvjunmd",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "586a380ee1592bbbeaf3b3f5792a9234fbc8a40b",
+        "nbModif": 1,
+        "date": "2014-12-18T16:23:07Z",
+        "ts": 1418919787,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "5e2bde6cc860c861143164b4b28c31d14912ab63",
+        "nbModif": 1,
+        "date": "2015-01-16T22:11:55Z",
+        "ts": null,
+        "user": "niteshgjoshi",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "f132d1dad30e19f8d5f3370b8192a0a60db345c4",
+        "nbModif": 1,
+        "date": "2015-06-01T07:14:04Z",
+        "ts": 1433142844,
+        "user": "",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "0a268daa05c754bb841e2b9e16b42128277d3d83",
+        "nbModif": 1,
+        "date": "2015-06-06T11:28:10Z",
+        "ts": 1433593690,
+        "user": "Gillespie59",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "0bede1c2ef94c13b4e72be5f641a716448d4f69b",
+        "nbModif": 1,
+        "date": "2014-12-03T08:33:32Z",
+        "ts": 1417595612,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "1c4d9f70cd9ae6a509909cf3381002361fe776e5",
+        "nbModif": 1,
+        "date": "2014-12-16T23:02:53Z",
+        "ts": 1418752973,
+        "user": "danriti",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "1d96eeffbeabb5e6e03da646a7848b4d910746ba",
+        "nbModif": 1,
+        "date": "2015-06-01T03:06:05Z",
+        "ts": 1433127965,
+        "user": "",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "8972ff9738ce00c129a1ace8a3a945f5da6fb947",
+        "nbModif": 1,
+        "date": "2014-11-25T08:18:29Z",
+        "ts": 1416903509,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "32a8ccc971060bdbf9f65e8f544208a5bf9146cb",
+        "nbModif": 1,
+        "date": "2014-12-03T05:58:46Z",
+        "ts": 1417557526,
+        "user": "Zizzamia",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "dbb0bb9544c81df4ae4a0a099f9729f88762cd48",
+        "nbModif": 2,
+        "date": "2014-11-01T09:07:31Z",
+        "ts": 1414832851,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "6406e1627ad641cb09cf44eeeb4f3508ada54f7e",
+        "nbModif": 2,
+        "date": "2014-10-29T13:15:35Z",
+        "ts": 1414588535,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "8dc433e7c31746d4abcc155ae586e00a21ffc86d",
+        "nbModif": 2,
+        "date": "2014-10-31T19:31:38Z",
+        "ts": 1414773098,
+        "user": "vinicius-sabadim",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "ac5797239ea7a0438a6897fdb3262ffb08b61b49",
+        "nbModif": 4,
+        "date": "2014-10-23T12:45:55Z",
+        "ts": 1414068355,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "445f0f11b8fe2db1e8e63c3dc95faef8baf7755a",
+        "nbModif": 2,
+        "date": "2014-10-29T11:43:28Z",
+        "ts": 1414586608,
+        "user": "vesparny",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "1f7d801ffdfd7dfdd6db3049ecc8113684a318ce",
+        "nbModif": 10,
+        "date": "2014-10-18T08:38:48Z",
+        "ts": 1413621528,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "39527af305c6cdf02413630d0a28e204e7900717",
+        "nbModif": 4,
+        "date": "2014-10-23T12:42:01Z",
+        "ts": 1414071721,
+        "user": "vesparny",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "2b5ab704c554f647e3d2ee30191e0a042d8a9667",
+        "nbModif": 1,
+        "date": "2014-10-14T19:15:06Z",
+        "ts": 1413314106,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "0c8ff66a492b5041976c4d4d4005f9c49c1b75e5",
+        "nbModif": 10,
+        "date": "2014-10-18T08:35:51Z",
+        "ts": 1413628551,
+        "user": "simison",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "d97a3142ac7ed7effbe79cd9c8328c3763684805",
+        "nbModif": 6,
+        "date": "2014-10-09T07:14:52Z",
+        "ts": 1412838892,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "11ec18c3e9b6dc596f8a540a7f09bfdade6a9826",
+        "nbModif": 1,
+        "date": "2014-10-14T18:19:04Z",
+        "ts": 1413299944,
+        "user": "fabiocerqueira",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "2e879f2729140db8c4c61951dad1cd4daa122c1d",
+        "nbModif": 1,
+        "date": "2014-09-29T08:01:58Z",
+        "ts": 1411977718,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "cfba5508db53cf214feb3a4b9de0e8b41e41f5a2",
+        "nbModif": 6,
+        "date": "2014-10-08T16:02:07Z",
+        "ts": 1412769727,
+        "user": "gpedro",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "e67e62c323870400ae426962298083c31de0c67b",
+        "nbModif": 3,
+        "date": "2014-09-10T08:04:29Z",
+        "ts": 1410336269,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "0c94d74e21f9a617c4a1d41a5e717327875d43e8",
+        "nbModif": 1,
+        "date": "2014-09-29T07:36:08Z",
+        "ts": 1411976168,
+        "user": "",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "7a019bc4514495b306e8ddb6c413855bb75ab72f",
+        "nbModif": 1,
+        "date": "2014-09-08T18:06:43Z",
+        "ts": 1410199603,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "64bef1e56123c29daacd3f301bc9c8e049a15080",
+        "nbModif": 3,
+        "date": "2014-09-10T08:00:02Z",
+        "ts": 1410339602,
+        "user": "sptq",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "4b40bbe0ebfe444461dd62a50dd7d6137aa34f07",
+        "nbModif": 1,
+        "date": "2014-09-08T07:07:31Z",
+        "ts": 1410160051,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "e14451a1707417d101f52945760de12a6f811caf",
+        "nbModif": 1,
+        "date": "2014-09-07T10:35:04Z",
+        "ts": 1410086104,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "195f2d78fa87a44506fb024bd8d98b09f86c5a33",
+        "nbModif": 1,
+        "date": "2014-09-07T22:14:07Z",
+        "ts": 1410099247,
+        "user": "jeffling",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "0ea1c2d032e4d8387c2e0cd2af896ebc57fb7352",
+        "nbModif": 1,
+        "date": "2014-08-30T14:23:58Z",
+        "ts": 1409408638,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "907484305bd762df263506e1691bdbf26f76c7a1",
+        "nbModif": 1,
+        "date": "2014-09-07T02:19:20Z",
+        "ts": 1410027560,
+        "user": "jeffling",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "28993b21af25df57f71200a2c77f70fdf476fd33",
+        "nbModif": 1,
+        "date": "2014-08-29T07:18:01Z",
+        "ts": 1409296681,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "817f090f6926d0f16cfcf4f4d6d7eee242687d30",
+        "nbModif": 1,
+        "date": "2014-08-30T14:11:16Z",
+        "ts": 1409379076,
+        "user": "jesalg",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "a4b41e94ac9dbb3de3ce8f0fd9763aa02570db8d",
+        "nbModif": 1,
+        "date": "2014-08-29T07:17:04Z",
+        "ts": 1409296624,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "4affae6217a36358142ff440ef1fd9e48e6e1707",
+        "nbModif": 1,
+        "date": "2014-08-28T20:28:56Z",
+        "ts": 1409236136,
+        "user": "ziyasal",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "2b2e2611e8a2845d8f9dfddba9b778ea2f69ce3a",
+        "nbModif": 1,
+        "date": "2014-08-28T14:18:33Z",
+        "ts": 1409235513,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "40f565cd2efd99b491b37ef60498cdd671c9777e",
+        "nbModif": 1,
+        "date": "2014-08-29T01:59:19Z",
+        "ts": 1409266759,
+        "user": "fabiocerqueira",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "d0ea27b7993e29d2a787adaf35d33e476739c7d8",
+        "nbModif": 5,
+        "date": "2014-08-27T20:16:09Z",
+        "ts": 1409170569,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "6cb23ab3d62cd2d62d03734e1aee0c9429e1137d",
+        "nbModif": 1,
+        "date": "2014-08-28T14:09:25Z",
+        "ts": 1409254765,
+        "user": "kanakiyajay",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "7b5c451f198f01cc479de2d7b07f5b5269ab077d",
+        "nbModif": 4,
+        "date": "2014-08-27T19:51:36Z",
+        "ts": 1409169096,
+        "user": "",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "991335a3fab1d5516cc24a8e3a90777cfcb7e43f",
+        "nbModif": 5,
+        "date": "2014-08-27T19:09:33Z",
+        "ts": 1409166573,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "566b9c0fae71764e04cf8765a1d4c740a6b25543",
+        "nbModif": 285,
+        "date": "2014-08-26T07:29:10Z",
+        "ts": 1409038150,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "656adf213d5260dc41c02b881054bc95519e902f",
+        "nbModif": 272,
+        "date": "2014-08-22T14:01:35Z",
+        "ts": 1408716095,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "c5ed32149ee7aee192642f7ed0b1df1b46f8e469",
+        "nbModif": 34,
+        "date": "2014-08-22T11:18:34Z",
+        "ts": 1408706314,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    },
+    {
+        "sha": "9708720b3672443c75560dbcc4c3e463a11cb6d6",
+        "nbModif": 95,
+        "date": "2014-08-22T10:53:16Z",
+        "ts": 1408704796,
+        "user": "gianarb",
+        "project": "gianarb/awesome-angularjs"
+    }
+]
