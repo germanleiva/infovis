@@ -6,6 +6,10 @@ d3.json("./data/data.json",function(data){
     D3.js setup code
     */
     
+    data.forEach(function(each){
+       each.date = format.parse(each.date) 
+    });
+    
     "use strict";
     var margin = 180,
         width = 1400 - margin,
@@ -32,7 +36,7 @@ d3.json("./data/data.json",function(data){
         .append("circle")
 
     var time_extent = d3.extent(data, function(d) {
-        return format.parse(d['date']);
+        return d.date
     });
 
     var time_scale = d3.time.scale()
@@ -54,7 +58,7 @@ d3.json("./data/data.json",function(data){
         return d;
     });
 
-    var project_scale = d3.scale.ordinal().range([height,margin]).domain(projectNames);
+    var project_scale = d3.scale.ordinal().range([height-20,margin]).domain(projectNames);
 
     var time_axis = d3.svg.axis()
         .scale(time_scale)
@@ -78,7 +82,7 @@ d3.json("./data/data.json",function(data){
 
     d3.selectAll('circle')
         .attr('cx', function(d) {
-            return time_scale(format.parse(d['date']));
+            return time_scale(d.date);
         })
         .attr('cy', function(d) {
             return project_scale(d.project);
@@ -92,7 +96,7 @@ d3.json("./data/data.json",function(data){
             // }
         })
         .attr('fill', function(d) {
-            var date = format.parse(d['date'])
+            var date = d.date
             if (date.getHours() > 8 && date.getHours() < 18) {
                 return 'yellow'
             }
