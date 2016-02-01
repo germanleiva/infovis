@@ -18,10 +18,6 @@ d3.json("./data/data.json",function(data){
     var radius = 3,
         multiplier = 2;
 
-    d3.select("body")
-        .append("h2")
-        .text("Ninja Coding");
-
     var svg = d3.select("body")
         .append("svg")
         .attr("width", width + margin)
@@ -38,6 +34,8 @@ d3.json("./data/data.json",function(data){
     var time_extent = d3.extent(data, function(d) {
         return d.date
     });
+    
+    console.log("TIME EXTEND:"+JSON.stringify(time_extent))
 
     var time_scale = d3.time.scale()
         .range([margin, width])
@@ -68,7 +66,7 @@ d3.json("./data/data.json",function(data){
         .append('g')
         .attr('class', 'x axis')
         .attr('transform', "translate(0," + height + ")")
-         .call(time_axis);
+        .call(time_axis);
 
     var count_axis = d3.svg.axis()
         .scale(project_scale)
@@ -79,34 +77,38 @@ d3.json("./data/data.json",function(data){
         .attr('class', 'y axis')
         .attr('transform', "translate(" + margin + ",0)")
         .call(count_axis);
-
-    d3.selectAll('circle')
-        .attr('cx', function(d) {
-            return time_scale(d.date);
-        })
-        .attr('cy', function(d) {
-            return project_scale(d.project);
-        })
-        .attr('r', function(d) {
-            // if (d['home'] === d['team1'] || d['home'] === d['team2']) {
-                // return radius * multiplier;
-            // } else {
-                return count_scale(d.nbModif)
-                // return radius;
-            // }
-        })
-        .attr('fill', function(d) {
-            var date = d.date
-            if (date.getHours() > 8 && date.getHours() < 18) {
-                return 'yellow'
-            }
-            // if (d['home'] === d['team1'] || d['home'] === d['team2']) {
-                // return 'red'
-            // } else {
-                return 'red';
-            // }
-        });
-
+       
+    function updateCircles() {
+        d3.selectAll('circle')
+            .attr('cx', function(d) {
+                return time_scale(d.date);
+            })
+            .attr('cy', function(d) {
+                return project_scale(d.project);
+            })
+            .attr('r', function(d) {
+                // if (d['home'] === d['team1'] || d['home'] === d['team2']) {
+                    // return radius * multiplier;
+                // } else {
+                    return count_scale(d.nbModif)
+                    // return radius;
+                // }
+            })
+            .attr('fill', function(d) {
+                var date = d.date
+                if (date.getHours() > 8 && date.getHours() < 18) {
+                    return 'yellow'
+                }
+                // if (d['home'] === d['team1'] || d['home'] === d['team2']) {
+                    // return 'red'
+                // } else {
+                    return 'red';
+                // }
+            });
+    }
+    
+     updateCircles();
+        
     // var legend = svg.append("g")
     //     .attr("class", "legend")
     //     .attr("transform", "translate(" + (width - 100) + "," + 20 + ")")
@@ -141,4 +143,31 @@ d3.json("./data/data.json",function(data){
     //     .text(function(d) {
     //         return d;
     //     });
+    $(function() {
+        var dates = data.map(function(d){return d.date;}).sort(function(a,b){return a - b;});
+        
+        $("#slider" ).slider({
+            range: true,
+            min: 0,
+            max: dates.length - 1,
+            values: [0, dates.length - 1],
+            slide: function( event, ui ) {
+                var maxv = d3.min([ui.values[1], data.length]);
+                var minv = d3.max([ui.values[0], 0]);;
+                console.log("min "+minv)
+                console.log("max "+maxv)
+                // debugger;
+                console.log("New time_scale domain: "+ JSON.stringify([dates[minv], dates[maxv-1]]))
+                time_scale.domain([dates[minv], dates[maxv-1]]);
+                
+                d3.select("svg").transition().duration(750).select(".x.axis").call(time_axis);
+                // debugger;
+                // console.log(result)
+
+                // graph.transition().duration(750)
+                // .select(".path").attr("d", line(data));
+                updateCircles()
+            }
+        });
+    });
 });

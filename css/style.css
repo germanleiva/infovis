@@ -29,3 +29,8 @@ circle {
     stroke: #4eb0bb;
     stroke-width: 1px;
 }
+
+.centered {
+    align-content: center;
+    margin: 0 100px;
+}
