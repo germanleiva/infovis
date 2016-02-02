@@ -122,9 +122,10 @@ function load(data){
         })
         .attr('fill', function(d) {
             if (isAWorkingHoursCommit(d)) {
-               return 'yellow'
+               //return '#ef8a62'
+               return '#ef8a62'
             } else {
-                return 'red';
+                return '#67a9cf';
             }
         })
     }
@@ -153,9 +154,9 @@ function load(data){
         })
         .attr("fill", function(d) {
             if (d == legendLabels[0]) {
-                return 'yellow';
+                return '#ef8a62';
             } else {
-                return 'red';
+                return '#67a9cf';
             }
         })
         
@@ -190,11 +191,11 @@ function load(data){
             legend.selectAll("rect").attr("fill", function(d) {
                 if (d == legendLabels[0]) {
                     if (showWorkingHours) {
-                        return 'yellow';
+                        return '#ef8a62';
                     }
                 } else {
                     if (showNonWorkingHours) {
-                        return 'red';
+                        return '#67a9cf';
                     }
                 }
                 return 'gray';
