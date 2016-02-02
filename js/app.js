@@ -54,6 +54,8 @@ function load(data){
         .data(data)
         .enter()
         .append("circle")
+        .append("title")
+        .text(function(d) { return "Committer: " + d.user });
 
     var time_extent = d3.extent(data, function(d) {
         return d.date
@@ -98,7 +100,7 @@ function load(data){
         .append('g')
         .attr('class', 'y axis')
         .attr('transform', "translate(" + margin + ",0)")
-        .call(count_axis);
+        .call(count_axis)
      
      var isAWorkingHoursCommit = function(theData){ 
          return theData.date.getHours() > 8 && theData.date.getHours() < 18 
