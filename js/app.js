@@ -1,4 +1,7 @@
 // var format = d3.time.format("%d-%m-%Y (%H:%M h)");
+     var showWorkingHours = true
+     var showNonWorkingHours = true
+     
 function load(data){
     /*data = [
     {
@@ -96,9 +99,13 @@ function load(data){
         .attr('class', 'y axis')
         .attr('transform', "translate(" + margin + ",0)")
         .call(count_axis);
-       
+     
+     var isAWorkingHoursCommit = function(theData){ 
+         return theData.date.getHours() > 8 && theData.date.getHours() < 18 
+     };
+
     function updateCircles() {
-        d3.selectAll('circle')
+        return d3.selectAll('circle')
         .attr('cx', function(d) {
             return time_scale(d.date);
         })
@@ -114,17 +121,12 @@ function load(data){
             // }
         })
         .attr('fill', function(d) {
-            var date = d.date
-            
-            if (date.getHours() > 8 && date.getHours() < 18) {
-                return 'yellow'
-            }
-            // if (d['home'] === d['team1'] || d['home'] === d['team2']) {
-                // return 'red'
-            // } else {
+            if (isAWorkingHoursCommit(d)) {
+               return 'yellow'
+            } else {
                 return 'red';
-            // }
-        });
+            }
+        })
     }
     
     updateCircles();
@@ -138,15 +140,16 @@ function load(data){
         .data(legendLabels)
         .enter().append("g");
 
+    var squareSize = 10
     legend.append("rect")
         .attr("y", function(d, i) {
-            return i * 25;
+            return i * 26;
         })
         .attr("width", function(d) {
-            return 10
+            return squareSize
         })
         .attr("height", function(d) {
-            return 10
+            return squareSize
         })
         .attr("fill", function(d) {
             if (d == legendLabels[0]) {
@@ -154,13 +157,59 @@ function load(data){
             } else {
                 return 'red';
             }
+        })
+        
+        .on("click", function() {
+            var selection = function() {
+                var newData =  data.filter(function(d){  
+                    if(isAWorkingHoursCommit(d)) { 
+                        return showWorkingHours; 
+                    } else {
+                        return showNonWorkingHours;
+                    }
+                })
+                return d3.select("svg").selectAll('circle').data(newData);
+            }
+            
+            if (this.__data__ == legendLabels[0]) {
+                showWorkingHours = !showWorkingHours;
+                if (showWorkingHours) {
+                    selection().enter().append("circle");
+                } else {
+                    selection().exit().remove();
+                }
+            } else if (this.__data__ == legendLabels[1]) {
+                showNonWorkingHours = !showNonWorkingHours;
+                if (showNonWorkingHours) {
+                    selection().enter().append("circle");
+                } else {
+                    selection().exit().remove();
+                }
+            }
+            
+            legend.selectAll("rect").attr("fill", function(d) {
+                if (d == legendLabels[0]) {
+                    if (showWorkingHours) {
+                        return 'yellow';
+                    }
+                } else {
+                    if (showNonWorkingHours) {
+                        return 'red';
+                    }
+                }
+                return 'gray';
+            })
+            
+            updateCircles();
+  
+            d3.event.stopPropagation();
         });
 
     legend.append("text")
         .attr("y", function(d, i) {
             return i * 30 + 5;
         })
-        .attr("x", radius * 5)
+        .attr("x", squareSize * 2)
         .text(function(d) {
             return d;
         });
