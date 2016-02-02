@@ -36,7 +36,7 @@ function load(data){
         width = 1400 - margin,
         height = 600 - margin;
 
-    var radius = 3,
+    var radius = 5,
         multiplier = 2;
 
     var svg = d3.select("body")
@@ -55,8 +55,6 @@ function load(data){
     var time_extent = d3.extent(data, function(d) {
         return d.date
     });
-    
-    console.log("TIME EXTEND:"+JSON.stringify(time_extent))
 
     var time_scale = d3.time.scale()
         .range([margin, width])
@@ -67,7 +65,7 @@ function load(data){
     });
 
     var count_scale = d3.scale.linear()
-        .range([2, 20])
+        .range([radius, 20])
         .domain(count_extent);
         
     var projectNames = d3.set(data.map(function(d){return d.project;}));
@@ -101,69 +99,72 @@ function load(data){
        
     function updateCircles() {
         d3.selectAll('circle')
-            .attr('cx', function(d) {
-                return time_scale(d.date);
-            })
-            .attr('cy', function(d) {
-                return project_scale(d.project);
-            })
-            .attr('r', function(d) {
-                // if (d['home'] === d['team1'] || d['home'] === d['team2']) {
-                    // return radius * multiplier;
-                // } else {
-                    return count_scale(d.nbModif)
-                    // return radius;
-                // }
-            })
-            .attr('fill', function(d) {
-                var date = d.date
-                if (date.getHours() > 8 && date.getHours() < 18) {
-                    return 'yellow'
-                }
-                // if (d['home'] === d['team1'] || d['home'] === d['team2']) {
-                    // return 'red'
-                // } else {
-                    return 'red';
-                // }
-            });
+        .attr('cx', function(d) {
+            return time_scale(d.date);
+        })
+        .attr('cy', function(d) {
+            return project_scale(d.project);
+        })
+        .attr('r', function(d) {
+            // if (d['home'] === d['team1'] || d['home'] === d['team2']) {
+                // return radius * multiplier;
+            // } else {
+                return count_scale(d.nbModif)
+                // return radius;
+            // }
+        })
+        .attr('fill', function(d) {
+            var date = d.date
+            
+            if (date.getHours() > 8 && date.getHours() < 18) {
+                return 'yellow'
+            }
+            // if (d['home'] === d['team1'] || d['home'] === d['team2']) {
+                // return 'red'
+            // } else {
+                return 'red';
+            // }
+        });
     }
     
-     updateCircles();
+    updateCircles();
+    
+    var legendLabels = ["Working Hours", "Non-Working Hours"];
         
-    // var legend = svg.append("g")
-    //     .attr("class", "legend")
-    //     .attr("transform", "translate(" + (width - 100) + "," + 20 + ")")
-    //     .selectAll("g")
-    //     .data(["Home Team", "Others"])
-    //     .enter().append("g");
+    var legend = svg.append("g")
+        .attr("class", "legend")
+        .attr("transform", "translate(" + (width - 100) + "," + 20 + ")")
+        .selectAll("g")
+        .data(legendLabels)
+        .enter().append("g");
 
-    // legend.append("circle")
-    //     .attr("cy", function(d, i) {
-    //         return i * 30;
-    //     })
-    //     .attr("r", function(d) {
-    //         if (d == "Home Team") {
-    //             return radius * multiplier;
-    //         } else {
-    //             return radius;
-    //         }
-    //     })
-    //     .attr("fill", function(d) {
-    //         if (d == "Home Team") {
-    //             return 'red';
-    //         } else {
-    //             return 'blue';
-    //         }
-    //     });
+    legend.append("rect")
+        .attr("y", function(d, i) {
+            return i * 25;
+        })
+        .attr("width", function(d) {
+            return 10
+        })
+        .attr("height", function(d) {
+            return 10
+        })
+        .attr("fill", function(d) {
+            if (d == legendLabels[0]) {
+                return 'yellow';
+            } else {
+                return 'red';
+            }
+        });
 
-    // legend.append("text")
-    //     .attr("y", function(d, i) {
-    //         return i * 30 + 5;
-    //     })
-    //     .attr("x", radius * 5)
-    //     .text(function(d) {
-    //         return d;
-    //     });
+    legend.append("text")
+        .attr("y", function(d, i) {
+            return i * 30 + 5;
+        })
+        .attr("x", radius * 5)
+        .text(function(d) {
+            return d;
+        });
+        
     $(function() {
         var dates = data.map(function(d){return d.date;}).sort(function(a,b){return a - b;});
         
@@ -175,18 +176,12 @@ function load(data){
             slide: function( event, ui ) {
                 var maxv = d3.min([ui.values[1], data.length]);
                 var minv = d3.max([ui.values[0], 0]);;
-                console.log("min "+minv)
-                console.log("max "+maxv)
-                // debugger;
+
                 console.log("New time_scale domain: "+ JSON.stringify([dates[minv], dates[maxv-1]]))
                 time_scale.domain([dates[minv], dates[maxv-1]]);
                 
                 d3.select("svg").transition().duration(750).select(".x.axis").call(time_axis);
-                // debugger;
-                // console.log(result)
-
-                // graph.transition().duration(750)
-                // .select(".path").attr("d", line(data));
+                
                 updateCircles()
             }
         });
