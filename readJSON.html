@@ -341,7 +341,7 @@ th, td {
             }
         }
         var myJSON = JSON.stringify(commitList);
-        console.log(myJSON);
+        console.log(commitList);
     });
 
     function getUserTZ(user, project){
@@ -402,21 +402,13 @@ th, td {
                     project.commitHM[commit].ts = date.getTime()/1000;
                     console.log("Timestamp 1 : "+project.commitHM[commit].ts);
                     project.commitHM[commit].ts = parseInt(project.commitHM[commit].ts) + parseInt(timeZoneHM[project.userList[project.commitHM[commit].user].city]);
-                    //console.log("User : "+project.userList[project.commitHM[commit].user].city);
-                    //console.log("TimeZone : "+timeZoneHM[project.userList[project.commitHM[commit].user].city]);
-                    console.log("Timestamp 2 : "+project.commitHM[commit].ts);
-                    //var myJSON = JSON.stringify(project.commitHM[commit]);
-                    //console.log(myJSON);
-                }
-            //}
 
-            //project.heap.push(commit);
+                    console.log("Timestamp 2 : "+project.commitHM[commit].ts);
+
+                }
+
         }
 
-        /*while (project.heap.size() != 0){
-            var c = project.heap.pop();
-            console.log(project.heap.size()+" : TZ : "+c);
-        }*/
     }
 
     $('#sortCommit').click(function(){

@@ -15,20 +15,16 @@
 <body>
     <h2>Ninja Coding</h2>
 
+     This project is an information visualization framework dedicated to the analysis and visualization of commit's GitHub Data. It aims to allow the user to visualize and compare commits data from different project, by displaying the frequency, but also the size and the time of the day for each of them.<br/><br/>
+     The user can load the projects directly using their name or by uploading a JSON File.<br/><br/>
+     <div id="box">
+	<div id="interactive">
+	<h1><span>Load from GitHub</span></h1>
 	<p>
         Name of a GitHub Project: 
         <input type="text" name="projectName" id="projectName" text="kevinvanhove/cssobjects"/>
             <!--<input type="submit" name="Submit"/>-->
-        <button id="submit">Submit</button>
-        <button id="CreateJSON">Create JSON</button>
-        <a download="data.json" id="downloadlink" style="display: none">Download</a>
-    </p>
-    <p>
-    	Name of a JSON file : 
-    	<input type="file" name="jsonFile" id="jsonFile"/>
-    	<button id="submitFile">Submit</button>
-    </p>
-    <p>
+        <button id="submit">Load the Project</button><br/>
         <table style="width:100%" id="table">
           <tr>
             <th>Project Name</th>
@@ -37,6 +33,22 @@
           </tr>
           
         </table>
+        <br/>
+        <button id="CreateJSON">Load the Data</button>
+        <a download="data.json" id="downloadlink" style="display: none">Download the JSON File</a>
+    </p>
+    </div>
+    <div id="file">
+    <h1><span>Load from a file</span></h1>
+    <p>
+    	JSON file : 
+    	<input type="file" name="jsonFile" id="jsonFile"/>
+    	<button id="submitFile">Load the File</button>
+    </p>
+    </div>
+    </div>
+    <p>
+        
     </p>
 
     <div id="slider" class="centered"></div>

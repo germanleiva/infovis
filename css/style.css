@@ -41,3 +41,29 @@ table, th, td {
 th, td {
     padding: 5px;
 }
+#interactive{
+    border: 1px black solid;
+    width: 45%;
+    padding: 5px;
+    margin-right:10px;
+}
+#file{
+    border:1px black solid;
+    width: 45%;
+    padding: 5px;
+}
+#box{
+    display:flex;
+    justify-content: space-around;
+}
+div h1{
+    text-align: left;
+    margin-top: -15px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+}
+
+div h1 span{
+    background-color: white;
+}
