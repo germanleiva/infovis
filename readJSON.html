@@ -3,6 +3,15 @@
 <head>
 <meta charset="utf-8" />
 <title>GitHub Project Reader</title>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+</style>
 </head>
 <body>
     <div id="placeholder">
@@ -12,12 +21,22 @@
         <input type="text" name="projectName" id="projectName" text="kevinvanhove/cssobjects"/>
             <!--<input type="submit" name="Submit"/>-->
         <button id="submit">Submit</button>
-        <button id="sortCommit">Sort commits</button>
-        <button id="checkUser">Check Users</button>
-        
+        <button id="CreateJSON">Create JSON</button>
+        <a download="data.json" id="downloadlink" style="display: none">Download</a>
     </p>
     <p>
-        <div id="result">Result: </div>
+        <table style="width:100%" id="table">
+          <tr>
+            <th>Project Name</th>
+            <th>Number of Commits</th>       
+            <th>Number of Users</th>
+          </tr>
+          
+        </table>
+    </p>
+
+    <p>
+        <!--<textarea id="textbox">Type something here</textarea> <button id="create">Create file</button> <a download="info.txt" id="downloadlink" style="display: none">Download</a>-->
     </p>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="./binaryHeap.js"></script>    
@@ -37,6 +56,10 @@
     var timeZoneHM = {};
 
     var commitInP = 0;
+
+
+    var loading = 0;
+    var end = 0;
 
     /*var heap = new binaryHeap(function(a, b){
         return a.ts < b.ts;
@@ -59,6 +82,7 @@
         this.date = "";
         this.ts = 0;
         this.user = "";
+        this.project = "";
         
     }
 
@@ -111,7 +135,7 @@
         var nom = nameProject;
         var project = new Project(nom);
         //projectG = project;
-
+        end = 1;
 
         projectHM[nameProject] = project;
 
@@ -129,12 +153,14 @@
                     console.log("Branch Name : "+data.data[i].name);
                     var b = new Branch(data.data[i].name);
                     var lastCommit = data.data[i].commit.sha;
+                    loading ++;
+                    console.log("Loading var : "+loading);
                     recoverCommit(lastCommit, b, project);
                     project.branchList.push(b);
                 
                 }
                 
-                $('#result').append('<br/>Loading ok');
+                //$('#table').append('<tr><td>Z</td><td>Z</td><td>Z</td></tr>');
             },
             error: function(e){
                 $('#result').append('<br/>Loading Failed, this project doesn\'t exist...');
@@ -191,6 +217,7 @@
             url: 'https://api.github.com/repos/'+project.name+'/commits/'+name+'?callback=callback&client_id='+idAPI+'&client_secret='+secretAPI+'',
             dataType: 'jsonp',
             success: function(data){
+                loading --;
                 var c = new Commit(name);
                 c.nbModif = data.data.stats.total;
                 c.date = data.data.commit.author.date;
@@ -216,18 +243,40 @@
                         c.user = committer;
                     //}
                 }
+                else{
+                    c.user = "";
+                }
                 var par = data.data.parents;
                 if(par.length > 0){
                     console.log("Number of Parent : "+par.length);
                     for(var k = 0; k<par.length; k++){
                         if((par[k].sha in project.commitHM) == false){
+                            loading ++;
                             recoverCommit(par[k].sha, branch, project);
+                            /*if(k>0){
+                                loading ++;
+                                console.log("Loading : "+loading);
+                            }*/
+                        }
+                        else{
+                            //loading --;
+                            console.log("Loading : "+loading);
+                            if(loading == 0){
+                                addTable(project);
+                                //end = 0;
+                            }
                         }
                     }
                 }
                 else{
                     console.log("Branch "+branch.name+" : "+Object.size(branch.commitList)+" commits");
                     console.log("Number of users using this branch : "+Object.size(project.userList));
+                    //loading --;
+                    console.log("Loading : "+loading);
+                    if(loading == 0){
+                        addTable(project);
+                        //end = 0;
+                    }
                 }
 
                 
@@ -236,13 +285,17 @@
         });
     }
 
+    function addTable(project){
+        $('#table').append('<tr><td>'+project.name+'</td><td>'+Object.size(project.commitHM)+'</td><td>'+Object.size(project.userList)+'</td></tr>');
+    }
+
     $(document).ready(function() {
         //Test
         $('#projectName').val("kevinvanhove/cssobjects");
         
     });
 
-    $('#checkUser').click(function(){
+    /*$('#checkUser').click(function(){
         var nom = $('#projectName').val();
         project = projectHM[nom];
         for(var i in project.userList){
@@ -257,6 +310,38 @@
             }
             console.log(i+" lives in "+city+" : "+coord+" TZO : "+tzo+"h");
         }
+    });*/
+
+    function getJSON(){
+        console.log("Creating JSON...");
+        var projectList = [];
+        var commitList = [];
+        for(var name in projectHM){
+            sortCommit(name);
+            //projectList.push(projectHM[name]);
+            for(var sha in projectHM[name].commitHM){
+                projectHM[name].commitHM[sha].project = name;
+                commitList.push(projectHM[name].commitHM[sha]);
+            }
+        }
+        var myJSON = JSON.stringify(commitList);
+        return myJSON;
+    }
+
+    $('#CreateJSON').click(function(){
+        console.log("Creating JSON...");
+        var projectList = [];
+        var commitList = [];
+        for(var name in projectHM){
+            sortCommit(name);
+            //projectList.push(projectHM[name]);
+            for(var sha in projectHM[name].commitHM){
+                projectHM[name].commitHM[sha].project = name;
+                commitList.push(projectHM[name].commitHM[sha]);
+            }
+        }
+        var myJSON = JSON.stringify(commitList);
+        console.log(myJSON);
     });
 
     function getUserTZ(user, project){
@@ -310,19 +395,28 @@
         project = projectHM[nom];
         for(var commit in project.commitHM){
             console.log("User : "+project.commitHM[commit].user);
-            if(commit.user != ""){
-                console.log("Timestamp 1 : "+project.commitHM[commit].ts);
-                project.commitHM[commit].ts = parseInt(project.commitHM[commit].ts) + parseInt(timeZoneHM[project.userList[project.commitHM[commit].user].city]);
-                //console.log("User : "+project.userList[project.commitHM[commit].user].city);
-                //console.log("TimeZone : "+timeZoneHM[project.userList[project.commitHM[commit].user].city]);
-                console.log("Timestamp 2 : "+project.commitHM[commit].ts);
-            }
-            project.heap.push(commit);
+            project.commitHM[commit].project = nom;
+            //if (typeof commit.user != 'undefined'){
+                if(project.commitHM[commit].user != ""){
+                    var date = new Date(project.commitHM[commit].date);
+                    project.commitHM[commit].ts = date.getTime()/1000;
+                    console.log("Timestamp 1 : "+project.commitHM[commit].ts);
+                    project.commitHM[commit].ts = parseInt(project.commitHM[commit].ts) + parseInt(timeZoneHM[project.userList[project.commitHM[commit].user].city]);
+                    //console.log("User : "+project.userList[project.commitHM[commit].user].city);
+                    //console.log("TimeZone : "+timeZoneHM[project.userList[project.commitHM[commit].user].city]);
+                    console.log("Timestamp 2 : "+project.commitHM[commit].ts);
+                    //var myJSON = JSON.stringify(project.commitHM[commit]);
+                    //console.log(myJSON);
+                }
+            //}
+
+            //project.heap.push(commit);
         }
-        while (project.heap.size() != 0){
+
+        /*while (project.heap.size() != 0){
             var c = project.heap.pop();
             console.log(project.heap.size()+" : TZ : "+c);
-        }
+        }*/
     }
 
     $('#sortCommit').click(function(){
@@ -343,6 +437,38 @@
             console.log("Commit Done !");
         }
     }
+
+
+
+    (function () {
+        var textFile = null,
+          makeTextFile = function (text) {
+            var data = new Blob([text], {type: 'text/plain'});
+
+            // If we are replacing a previously generated file we need to
+            // manually revoke the object URL to avoid memory leaks.
+            if (textFile !== null) {
+              window.URL.revokeObjectURL(textFile);
+            }
+
+            textFile = window.URL.createObjectURL(data);
+
+            return textFile;
+          };
+
+
+          var create = document.getElementById('CreateJSON'),
+            textbox = document.getElementById('textbox');
+
+          create.addEventListener('click', function () {
+
+            var link = document.getElementById('downloadlink');
+            link.href = makeTextFile(getJSON());
+            link.style.display = 'block';
+          }, false);
+        })();
+
+
 
     /*$.ajax({
       url: 'https://api.github.com/repos/kevinvanhove/cssobjects',
