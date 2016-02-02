@@ -1,5 +1,26 @@
 // var format = d3.time.format("%d-%m-%Y (%H:%M h)");
-d3.json("./data/data.json",function(data){
+function load(data){
+    /*data = [
+    {
+        "sha": "a3f51f7f3a00bc17f10e59546977a9c0b40697a5",
+        "nbModif": 13,
+        "date": "2011-02-23T06:18:33Z",
+        "ts": 1298441913,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    },
+    {
+        "sha": "4c9a2954d1d9769d7a70d1e5646509ee4ef39bd2",
+        "nbModif": 3,
+        "date": "2011-02-14T05:21:18Z",
+        "ts": 1297660878,
+        "user": "addyosmani",
+        "project": "addyosmani/backbonejs-gallery"
+    }];*/
+    //console.log(dataB);
+
+
+//d3.json("./data/data.json",function(data){
     // 2014-12-30T10:27:10Z
     var format = d3.time.format("%Y-%m-%dT%H:%M:%SZ");
     /*
@@ -170,4 +191,7 @@ d3.json("./data/data.json",function(data){
             }
         });
     });
-});
+//});
+}
+
+
